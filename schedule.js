@@ -12,7 +12,7 @@ const jobs = {
             method: 'GET',
             uri: 'https://api.ethermine.org/miner/d3fbb8a8a84f52A8D3B010344A4dCf38F508B860/currentStats',
         };
-        schedule.scheduleJob('* /10 * * * *', async function () {
+        schedule.scheduleJob('* /10/20/30/40/50/00 * * * *', async function () {
             rp(requestOptions).then((response) => {
                 console.log(response)
                 let res = JSON.parse(response)
@@ -35,7 +35,7 @@ const jobs = {
                 console.log(err)
             })
         })
-        schedule.scheduleJob('* /5 * * * *', async function () {
+        schedule.scheduleJob('* /5/10/15/20/25/30/35/40/45/55/00 * * * *', async function () {
             rp(requestOptions).then((response) => {
                 console.log(response)
                 let res = JSON.parse(response)
