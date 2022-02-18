@@ -20,8 +20,7 @@ function miner_message(status, data, callback) {
         to: 'zion18095610369@icloud.com', // 接受者,可以同时发送多个,以逗号隔开
         subject: `miner message`, // 标题
         html: `
-矿机状态：` + stat +
-            `<p>最后登陆时间：${data.lastSeen}</p>
+矿机状态：` + stat + `
 <p style="color: chocolate">上报算力：${data.reportedHashrate}</p>
 <p style="color: magenta">当前算力：${data.currentHashrate}</p>
 <p style="color: crimson">平均算力：${data.averageHashrate}</p>
@@ -33,6 +32,7 @@ function miner_message(status, data, callback) {
 <p style="color: darkgreen">未付ETH：${data.unpaid}</p>
 <p style="color: darkmagenta">预估每日ETH收益：${data.coinsPerMin}</p>
 <p style="color: darkmagenta">预估每日USD收益：${data.usdPerMin}</p>
+<p>最后登陆时间：${data.lastSeen}</p>
 `
     };
     var result = {
