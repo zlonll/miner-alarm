@@ -1,0 +1,2 @@
+# miner-alarm
+miner
