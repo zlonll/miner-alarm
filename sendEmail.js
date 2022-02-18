@@ -25,7 +25,7 @@ function miner_message(status, data, callback) {
 <p style="color: chocolate">上报算力：${data.reportedHashrate}</p>
 <p style="color: magenta">当前算力：${data.currentHashrate}</p>
 <p style="color: crimson">平均算力：${data.averageHashrate}</p>
-<p style="color: blue">陈旧占比：${data.btcPerMin}%</p>
+<p style="color: burlywood">陈旧占比：${data.btcPerMin}%</p>
 <p style="color: green">有效股份：${data.validShares}</p>
 <p style="color: red">无效股份：${data.invalidShares}</p>
 <p style="color: cornflowerblue">陈旧股份：${data.staleShares}</p>

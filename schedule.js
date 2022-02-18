@@ -6,11 +6,11 @@ var rp = require('request-promise');
 var sendEmail = require('./sendEmail');
 
 let rule1 = new schedule.RecurrenceRule();
-rule1.minute = [0, 10,11, 20, 30, 40, 50]; //
+rule1.minute = [0,10,20,30, 40, 50]; //
 rule1.second = 0;
 
 let rule2 = new schedule.RecurrenceRule();
-rule2.minute = [0,5,10,11,15,20,25,30,35,40,45,50,55]; //
+rule2.minute = [0,5,10,15,20,25,30,35,40,45,50,55]; //
 rule2.second = 0;
 
 const jobs = {
