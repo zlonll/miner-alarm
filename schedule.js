@@ -36,9 +36,12 @@ const jobs = {
                 data.usdPerMin = (data.coinsPerMin * 60 * 24);
                 data.btcPerMin = (data.staleShares / data.validShares * 100).toFixed(2)
                 console.log(data)
-                sendEmail.miner_message(res.status, data, (err) => {
-                    console.log(err)
-                })
+                if (data.reportedHashrate-data.currentHashrate>45){
+                    sendEmail.miner_message(res.status, data, (err) => {
+                        console.log(err)
+                    })
+                }
+
             }).catch((err) => {
                 console.log(err)
             })
