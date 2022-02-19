@@ -50,7 +50,7 @@ const jobs = {
                 let data = res.data;
                 data.time = dateFormat(new Date(data.time * 1000), 'yyyy-mm-dd HH:MM:ss');
                 data.lastSeen = dateFormat(new Date(data.lastSeen * 1000), 'yyyy-mm-dd HH:MM:ss');
-                if (res.reportedHashrate === 0) {
+                if (data.reportedHashrate === 0) {
                     sendEmail.miner_warning(data, (err) => {
                         console.log(err)
                     })
