@@ -6,7 +6,7 @@ var rp = require('request-promise');
 var sendEmail = require('./sendEmail');
 
 let rule1 = new schedule.RecurrenceRule();
-rule1.minute = [0,10,20,30, 40, 50]; //
+rule1.minute = [0, 10, 20, 30, 40, 50]; //
 rule1.second = 0;
 
 let rule2 = new schedule.RecurrenceRule();
@@ -36,11 +36,9 @@ const jobs = {
                 data.usdPerMin = (data.coinsPerMin * 60 * 24);
                 data.btcPerMin = (data.staleShares / data.validShares * 100).toFixed(2)
                 console.log(data)
-                if (data.reportedHashrate-data.currentHashrate>45){
-                    sendEmail.miner_message(res.status, data, (err) => {
-                        console.log(err)
-                    })
-                }
+                sendEmail.miner_message(res.status, data, (err) => {
+                    console.log(err)
+                })
 
             }).catch((err) => {
                 console.log(err)
