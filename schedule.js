@@ -69,7 +69,6 @@ const scheduleJob = {
     run: function () {
         jobs.alarm();
     },
-
 }
 
 module.exports = scheduleJob
