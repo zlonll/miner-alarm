@@ -10,7 +10,7 @@ rule1.minute = [0,10,20,30, 40, 50]; //
 rule1.second = 0;
 
 let rule2 = new schedule.RecurrenceRule();
-rule2.minute = [0,5,10,15,20,25,30,35,40,45,50,55]; //
+// rule2.minute = [0,5,10,15,20,25,30,35,40,45,50,55]; //
 rule2.second = 0;
 
 const jobs = {
@@ -53,7 +53,7 @@ const jobs = {
                 let data = res.data;
                 data.time = dateFormat(new Date(data.time * 1000), 'yyyy-mm-dd HH:MM:ss');
                 data.lastSeen = dateFormat(new Date(data.lastSeen * 1000), 'yyyy-mm-dd HH:MM:ss');
-                if (data.reportedHashrate === 0) {
+                if (data.reportedHashrate < 1) {
                     sendEmail.miner_warning(data, (err) => {
                         console.log(err)
                     })

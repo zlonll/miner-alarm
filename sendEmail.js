@@ -69,7 +69,12 @@ function miner_warning(data, callback) {
         from: '951093847@qq.com', // 发送者
         to: 'zion18095610369@icloud.com', // 接受者,可以同时发送多个,以逗号隔开
         subject: `miner warning`, // 标题
-        html: `矿机状态：<span style="color:red;">OUTLINE</span><p>最后登陆时间：${data.lastSeen}</p>`
+        html: `矿机状态：<span style="color:red;">OUTLINE</span>
+<p style="color: chocolate">上报算力：${data.reportedHashrate}</p>
+<p style="color: magenta">当前算力：${data.currentHashrate}</p>
+<p style="color: crimson">平均算力：${data.averageHashrate}</p>
+<p style="color: burlywood">陈旧占比：${data.btcPerMin}%</p>
+<p>最后登陆时间：${data.lastSeen}</p>`
     };
     var result = {
         httpCode: 200,
