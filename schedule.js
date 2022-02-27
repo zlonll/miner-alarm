@@ -18,7 +18,7 @@ const jobs = {
 
         let requestOptions = {
             method: 'GET',
-            uri: 'https://api.ethermine.org/miner/d3fbb8a8a84f52A8D3B010344A4dCf38F508B860/currentStats',
+            uri: 'https://api.ethermine.org/miner/0x681A96ddB2aeB4ca6510Af2a1D3DB47fa1570A4A/currentStats',
         };
         schedule.scheduleJob(rule1, async function () {
             rp(requestOptions).then((response) => {
