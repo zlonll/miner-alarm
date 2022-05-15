@@ -7,7 +7,7 @@ function miner_message(status, data, callback) {
         host: smtp,
         auth: {
             user: "4683203@qq.com",
-            pass: 'dwsavqmbdbxmbieh' //授权码,通过QQ获取
+            pass: 'wkcuydsejcmdbjej' //授权码,通过QQ获取
 
         }
     });
