@@ -6,7 +6,7 @@ var rp = require('request-promise');
 var sendEmail = require('./sendEmail');
 
 let rule1 = new schedule.RecurrenceRule();
-rule1.minute = [0, 10, 20, 30, 40, 50]; //
+rule1.minute = [0, 20, 40]; //
 rule1.second = 0;
 
 let rule2 = new schedule.RecurrenceRule();
